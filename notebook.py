@@ -1,17 +1,11 @@
 import pymysql
+from settings import dbc
 
 
 class Notebook:
-    dbc = {"host": "filesrv",
-           "database": "notebook",
-           "user": "creator",
-           "password": "qwe",
-           # "cursorclass": pymysql.cursors.DictCursor
-           }
-
     def __init__(self):
         try:
-            self.db = pymysql.connect(**self.dbc)
+            self.db = pymysql.connect(**dbc)
         except pymysql.err.OperationalError as ex:
             print('Error:', ex)
             exit()
