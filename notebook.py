@@ -22,15 +22,6 @@ class Notebook:
             print('Error:', ex)
 
     def add_note(self, subject, parentid=None, id_=None, content=None):
-        # self.db.cursor().execute("""
-        #     CREATE TABLE IF NOT EXISTS note(
-        #         id INT PRIMARY KEY AUTO_INCREMENT,
-        #         parentid INT,
-        #         subject VARCHAR(100),
-        #         content TEXT,
-        #         ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        #     );
-        # """)
 
         try:
             with self.db.cursor() as cursor:
