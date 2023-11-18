@@ -1,4 +1,5 @@
 import pymysql
+# import oracledb  # https://www.oracle.com/database/technologies/appdev/python/quickstartpythononprem.html
 from settings import dbc
 
 tags = {"0": "Task",
